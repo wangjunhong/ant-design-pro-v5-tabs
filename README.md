@@ -1,2 +1,3 @@
-# ant-design-pro-v5-tabs
-ant-design-pro v5多标签，仅供参考
+date: 20200124
+ant design pro V5 多页签demo
+新建的一个V5初始项目，在这个基础上改的，里面还有很多细节需要打磨，跟具体的项目相结合的时候还需要做一些调整，仅供学习参考。
