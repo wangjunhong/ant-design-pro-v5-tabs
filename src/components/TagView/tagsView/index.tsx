@@ -96,7 +96,7 @@ const TagsView = (props: {
     const { pathname, query } = params;
     //先在手动配置里面找 没有配置就在路由里找（登录的时候需要设置到sessionStorage）
     let title = titles[pathname];
-    if (JSON.stringify(query) !== '{}') {
+    if (title && JSON.stringify(query) !== '{}') {
       title = title.replace('新增', '编辑');
     }
     //需要根据实际情况修改
