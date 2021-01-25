@@ -4,3 +4,6 @@ ant design pro V5 多页签demo
 
 ---
 直接新建的项目上传之后会提示Node版本问题，按照提示升级nodejs即可解决问题
+
+---
+20210125修复一个titles相关的bug
