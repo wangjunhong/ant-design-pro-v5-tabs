@@ -43,6 +43,7 @@ const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
       if (key === 'logout' && initialState) {
         setInitialState({ ...initialState, currentUser: undefined });
         loginOut();
+        sessionStorage.clear();
         return;
       }
       history.push(`/account/${key}`);
