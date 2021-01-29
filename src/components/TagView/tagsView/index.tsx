@@ -108,7 +108,7 @@ const TagsView = (props: {
       const { path, query } = arr[arr.length - 1];
       history.push({
         pathname: path,
-        state: query,
+        query,
       });
     }
   };
@@ -196,7 +196,7 @@ const TagsView = (props: {
       const { path, query } = selectedTag;
       history.push({
         pathname: path,
-        state: query,
+        query,
       });
     }
     setVisitedViews(arr);
@@ -250,7 +250,7 @@ const TagsView = (props: {
               onClick={() => {
                 history.push({
                   pathname: tag.path,
-                  state: tag.query,
+                  query: tag.query,
                 });
               }}
               // eslint-disable-next-line no-restricted-globals
