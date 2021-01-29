@@ -211,12 +211,23 @@ const TagsView = (props: {
     history.push('/welcome');
   };
   const [visible, setVisible] = useState(false);
+  
+  // 获取侧边栏的宽度
+  const getSilderWidth = () => {
+    if (document.getElementsByClassName('ant-layout-sider')) {
+      const { width } = document.getElementsByClassName('ant-layout-sider')[0].style;
+      if (width) {
+        return parseInt(width, 10);
+      }
+    }
+    return 208;
+  };
 
   // 右键显示三个按钮
   const openMenu = (e: any, t: Route) => {
     e.preventDefault();
     setSelectedTag(t);
-    setLeft(e.offsetX + 65);
+    setLeft(e.screenX - getSilderWidth());
     setVisible(true);
   };
 
