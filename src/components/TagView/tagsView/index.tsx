@@ -216,7 +216,7 @@ const TagsView = (props: {
   const openMenu = (e: any, t: Route) => {
     e.preventDefault();
     setSelectedTag(t);
-    setLeft(e.offsetX + 150);
+    setLeft(e.offsetX + 65);
     setVisible(true);
   };
 
