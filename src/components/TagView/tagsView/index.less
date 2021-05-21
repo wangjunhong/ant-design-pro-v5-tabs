@@ -1,66 +1,74 @@
 @primary: #1890ff;
 
 .tags_view_container {
-  line-height: 34px;
+  position: relative;
   width: 100%;
+  line-height: 34px;
   background: #fff;
   border-bottom: 1px solid #d8dce5;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.04);
-  position: relative;
+
   .tags_view_wrapper {
     .tags_view_item {
-      display: inline-block;
       position: relative;
-      cursor: pointer;
+      display: inline-block;
       height: 26px;
-      line-height: 26px;
-      border: 1px solid #d8dce5;
-      color: #495060;
-      background: #fff;
-      padding: 0 8px;
-      font-size: 12px;
-      margin-left: 5px;
       margin-top: 4px;
+      margin-left: 5px;
+      padding: 0 8px;
+      color: #495060;
+      font-size: 12px;
+      line-height: 26px;
+      background: #fff;
+      border: 1px solid #d8dce5;
+      cursor: pointer;
+
       &:first-of-type {
         margin-left: 15px;
       }
+
       &:last-of-type {
         margin-right: 15px;
       }
+
       &.active {
-        background-color: @primary;
         color: #fff;
+        background-color: @primary;
         border-color: @primary;
+
         &::before {
-          content: "";
-          background: #fff;
+          position: relative;
           display: inline-block;
           width: 8px;
           height: 8px;
-          border-radius: 50%;
-          position: relative;
           margin-right: 2px;
+          background: #fff;
+          border-radius: 50%;
+          content: '';
         }
       }
     }
   }
+
   .contextmenu {
-    margin: 0;
-    background: #fff;
+    position: fixed;
     z-index: 3000;
-    position: absolute;
-    list-style-type: none;
+    margin: 0;
     padding: 5px 0;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 400;
     color: #333;
+    font-weight: 400;
+    font-size: 12px;
+    list-style-type: none;
+    background: #fff;
+    border-radius: 4px;
     box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+
     li {
       margin: 0;
       padding: 2px 16px;
       line-height: 24px;
       cursor: pointer;
+
       &:hover {
         background: #eee;
       }

@@ -211,23 +211,12 @@ const TagsView = (props: {
     history.push('/welcome');
   };
   const [visible, setVisible] = useState(false);
-  
-  // 获取侧边栏的宽度
-  const getSilderWidth = () => {
-    if (document.getElementsByClassName('ant-layout-sider')) {
-      const { width } = document.getElementsByClassName('ant-layout-sider')[0].style;
-      if (width) {
-        return parseInt(width, 10);
-      }
-    }
-    return 208;
-  };
 
   // 右键显示三个按钮
   const openMenu = (e: any, t: Route) => {
     e.preventDefault();
     setSelectedTag(t);
-    setLeft(e.screenX - getSilderWidth());
+    setLeft(e.clientX);
     setVisible(true);
   };
 
@@ -285,7 +274,7 @@ const TagsView = (props: {
       </div>
 
       {visible && (
-        <ul style={{ left: `${left}px`, top: '30px' }} className={styles.contextmenu}>
+        <ul style={{ left: `${left}px`, top: '76px' }} className={styles.contextmenu}>
           {selectedTag && selectedTag.closable && (
             <li onClick={() => closeSelectedTag(selectedTag)}>{setLang('close', '关闭')}</li>
           )}

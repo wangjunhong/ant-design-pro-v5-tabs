@@ -15,3 +15,7 @@ date: 20210124 ant design pro V5 多页签 demo 新建的一个 V5 初始项目�
 ---
 
 20210225 umi-plugin-keep-alive 插件升级出错，可以先固定版本 https://github.com/alitajs/umi-plugin-keep-alive/issues/34
+
+---
+
+20210521 关闭块位置改成 fixed 定位
